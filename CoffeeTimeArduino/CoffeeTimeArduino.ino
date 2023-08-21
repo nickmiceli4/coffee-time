@@ -4,6 +4,9 @@
 #define WIFI_PASSWORD "Patsfans68!"
 #define WIFI_TIMEOUT_MS 20000
 
+WiFiServer server(80);
+int tmSec = 0;
+
 void connectWiFi(){
   Serial.print("Connecting to WiFi");
   WiFi.mode(WIFI_STA);
@@ -23,6 +26,8 @@ void connectWiFi(){
     Serial.println(WiFi.localIP());
   }
 }
+
+
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
@@ -30,9 +35,42 @@ void setup() {
     delay(100);
   }
   connectWiFi();
+  server.begin();
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
+  WiFiClient client = server.available();
+  if(client){
+    Serial.println("client connected");
+    boolean currentLineBlank = true;
+    while(client.connected()){
+      if(client.available()){
+        char c = client.read();
+        Serial.write(c);
+        if(c == '\n' && currentLineBlank){
+          client.println("HTTP/1.1 200 OK");
+          client.println("Content-Type: application/json;charset=utf-8");
+          client.println("Server: Arduino");
+          client.println("Connnection: close");
+          client.println();
+          client.print("{\"arduino\":[{\"time\":\"");
+          client.print(tmSec);
+          client.print("\"}]}");
+          client.println();
+          break;
+        }
+        if(c == '\n'){
+          currentLineBlank = true;
+        } else if(c != '\r'){
+          currentLineBlank = false;
+        }
+      }
+    }
+    client.stop();
+    Serial.println("client disconnected");
+  }
 
+  delay(1000);
+  tmSec++;
 }

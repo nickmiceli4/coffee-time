@@ -57,10 +57,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135.38461538461539" y="-2.1327014218009479"/>
+            <point key="canvasLocation" x="135.34883720930233" y="-2.5751072961373391"/>
         </scene>
     </scenes>
-    <color key="tintColor" red="0.2117646933" green="0.1607843041" blue="0.098039209840000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="coffee-4912804_1280" width="1280" height="851"/>
         <image name="deskclock" catalog="system" width="128" height="125"/>
