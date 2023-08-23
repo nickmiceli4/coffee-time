@@ -3,4 +3,70 @@
    uuid = "5DF986FE-FC38-473E-9A7D-F88629E719C5"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3384BDBC-0BD4-43D4-84CF-BC9444C35A87"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CoffeeTime/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
+            landmarkName = "configureSheet()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3384BDBC-0BD4-43D4-84CF-BC9444C35A87 - 3875247dd9aeecfa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CoffeeTime.ViewController.configureSheet() -&gt; ()"
+                  moduleName = "CoffeeTime"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nickmiceli/Desktop/CoffeeTime/CoffeeTime/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "136"
+                  endingLineNumber = "136"
+                  offsetFromSymbolStart = "332">
+               </Location>
+               <Location
+                  uuid = "3384BDBC-0BD4-43D4-84CF-BC9444C35A87 - 3875247dd9aeec7e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CoffeeTime.ViewController.configureSheet() -&gt; ()"
+                  moduleName = "CoffeeTime"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nickmiceli/Desktop/CoffeeTime/CoffeeTime/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "140"
+                  endingLineNumber = "140"
+                  offsetFromSymbolStart = "432">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D1612960-D8ED-471D-82F8-3A489B029B10"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIViewController.h"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "295"
+            endingLineNumber = "295"
+            landmarkName = "-showViewController:sender:"
+            landmarkType = "6">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

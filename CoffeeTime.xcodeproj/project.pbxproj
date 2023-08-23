@@ -16,6 +16,14 @@
 		7B8A0D5C2A8C02D3006ECD9E /* CoffeeTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8A0D5B2A8C02D3006ECD9E /* CoffeeTimeTests.swift */; };
 		7B8A0D662A8C02D3006ECD9E /* CoffeeTimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8A0D652A8C02D3006ECD9E /* CoffeeTimeUITests.swift */; };
 		7B8A0D682A8C02D3006ECD9E /* CoffeeTimeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8A0D672A8C02D3006ECD9E /* CoffeeTimeUITestsLaunchTests.swift */; };
+		7BB0B2412A95A239008EAA42 /* SheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB0B2402A95A239008EAA42 /* SheetViewController.swift */; };
+		7BD8D3DF2A95D845005F108C /* Coffee Cup Paper.json in Resources */ = {isa = PBXBuildFile; fileRef = 7BD8D3DE2A95D845005F108C /* Coffee Cup Paper.json */; };
+		7BF6B8BF2A94480D00877A5E /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 7BF6B8BE2A94480D00877A5E /* Lottie */; };
+		7BF6B8C52A94485600877A5E /* Power Failure.json in Resources */ = {isa = PBXBuildFile; fileRef = 7BF6B8C02A94485500877A5E /* Power Failure.json */; };
+		7BF6B8C62A94485600877A5E /* Coffee Maker.json in Resources */ = {isa = PBXBuildFile; fileRef = 7BF6B8C12A94485500877A5E /* Coffee Maker.json */; };
+		7BF6B8C72A94485600877A5E /* Coffee Mug.json in Resources */ = {isa = PBXBuildFile; fileRef = 7BF6B8C22A94485600877A5E /* Coffee Mug.json */; };
+		7BF6B8C82A94485600877A5E /* Watering Loader.json in Resources */ = {isa = PBXBuildFile; fileRef = 7BF6B8C32A94485600877A5E /* Watering Loader.json */; };
+		7BF6B8CF2A94596800877A5E /* Flask Heating Experiment.json in Resources */ = {isa = PBXBuildFile; fileRef = 7BF6B8CE2A94596700877A5E /* Flask Heating Experiment.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +57,13 @@
 		7B8A0D612A8C02D3006ECD9E /* CoffeeTimeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeTimeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B8A0D652A8C02D3006ECD9E /* CoffeeTimeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeTimeUITests.swift; sourceTree = "<group>"; };
 		7B8A0D672A8C02D3006ECD9E /* CoffeeTimeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeTimeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7BB0B2402A95A239008EAA42 /* SheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViewController.swift; sourceTree = "<group>"; };
+		7BD8D3DE2A95D845005F108C /* Coffee Cup Paper.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Coffee Cup Paper.json"; sourceTree = "<group>"; };
+		7BF6B8C02A94485500877A5E /* Power Failure.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Power Failure.json"; sourceTree = "<group>"; };
+		7BF6B8C12A94485500877A5E /* Coffee Maker.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Coffee Maker.json"; sourceTree = "<group>"; };
+		7BF6B8C22A94485600877A5E /* Coffee Mug.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Coffee Mug.json"; sourceTree = "<group>"; };
+		7BF6B8C32A94485600877A5E /* Watering Loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Watering Loader.json"; sourceTree = "<group>"; };
+		7BF6B8CE2A94596700877A5E /* Flask Heating Experiment.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Flask Heating Experiment.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BF6B8BF2A94480D00877A5E /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,10 +118,17 @@
 				7B8A0D442A8C02D1006ECD9E /* AppDelegate.swift */,
 				7B8A0D462A8C02D1006ECD9E /* SceneDelegate.swift */,
 				7B8A0D482A8C02D1006ECD9E /* ViewController.swift */,
+				7BB0B2402A95A239008EAA42 /* SheetViewController.swift */,
 				7B8A0D4A2A8C02D1006ECD9E /* Main.storyboard */,
 				7B8A0D4D2A8C02D3006ECD9E /* Assets.xcassets */,
 				7B8A0D4F2A8C02D3006ECD9E /* LaunchScreen.storyboard */,
 				7B8A0D522A8C02D3006ECD9E /* Info.plist */,
+				7BF6B8C12A94485500877A5E /* Coffee Maker.json */,
+				7BD8D3DE2A95D845005F108C /* Coffee Cup Paper.json */,
+				7BF6B8C22A94485600877A5E /* Coffee Mug.json */,
+				7BF6B8C02A94485500877A5E /* Power Failure.json */,
+				7BF6B8CE2A94596700877A5E /* Flask Heating Experiment.json */,
+				7BF6B8C32A94485600877A5E /* Watering Loader.json */,
 			);
 			path = CoffeeTime;
 			sourceTree = "<group>";
@@ -143,6 +166,9 @@
 			dependencies = (
 			);
 			name = CoffeeTime;
+			packageProductDependencies = (
+				7BF6B8BE2A94480D00877A5E /* Lottie */,
+			);
 			productName = CoffeeTime;
 			productReference = 7B8A0D412A8C02D1006ECD9E /* CoffeeTime.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +241,9 @@
 				Base,
 			);
 			mainGroup = 7B8A0D382A8C02D1006ECD9E;
+			packageReferences = (
+				7BF6B8BD2A94480D00877A5E /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = 7B8A0D422A8C02D1006ECD9E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -232,6 +261,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B8A0D512A8C02D3006ECD9E /* LaunchScreen.storyboard in Resources */,
+				7BF6B8CF2A94596800877A5E /* Flask Heating Experiment.json in Resources */,
+				7BD8D3DF2A95D845005F108C /* Coffee Cup Paper.json in Resources */,
+				7BF6B8C72A94485600877A5E /* Coffee Mug.json in Resources */,
+				7BF6B8C62A94485600877A5E /* Coffee Maker.json in Resources */,
+				7BF6B8C82A94485600877A5E /* Watering Loader.json in Resources */,
+				7BF6B8C52A94485600877A5E /* Power Failure.json in Resources */,
 				7B8A0D4E2A8C02D3006ECD9E /* Assets.xcassets in Resources */,
 				7B8A0D4C2A8C02D1006ECD9E /* Main.storyboard in Resources */,
 			);
@@ -258,6 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BB0B2412A95A239008EAA42 /* SheetViewController.swift in Sources */,
 				7B8A0D492A8C02D1006ECD9E /* ViewController.swift in Sources */,
 				7B8A0D452A8C02D1006ECD9E /* AppDelegate.swift in Sources */,
 				7B8A0D472A8C02D1006ECD9E /* SceneDelegate.swift in Sources */,
@@ -598,6 +634,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7BF6B8BD2A94480D00877A5E /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7BF6B8BE2A94480D00877A5E /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7BF6B8BD2A94480D00877A5E /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7B8A0D392A8C02D1006ECD9E /* Project object */;
 }

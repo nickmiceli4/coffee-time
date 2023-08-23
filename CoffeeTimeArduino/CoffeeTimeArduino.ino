@@ -7,26 +7,12 @@
 WiFiServer server(80);
 int tmSec = 0;
 
-void connectWiFi(){
-  Serial.print("Connecting to WiFi");
-  WiFi.mode(WIFI_STA);
-  WiFi.begin(WIFI_NETWORK, WIFI_PASSWORD);
+bool heatLED = false;
+bool powerLED = false;
+bool brewLED = false;
+bool waterLED = false;
 
-  unsigned long startAttemptTime = millis();
-
-  while(WiFi.status() != WL_CONNECTED && millis() - startAttemptTime < WIFI_TIMEOUT_MS){
-    Serial.print(".");
-    delay(500);
-  }
-
-  if(WiFi.status() != WL_CONNECTED){
-    Serial.println("\nFailed to connect...");
-  }else{
-    Serial.print("\nConnected, IP: ");
-    Serial.println(WiFi.localIP());
-  }
-}
-
+String machineStatus = "READY";
 
 void setup() {
   // put your setup code here, to run once:
@@ -54,9 +40,11 @@ void loop() {
           client.println("Server: Arduino");
           client.println("Connnection: close");
           client.println();
-          client.print("{\"arduino\":[{\"time\":\"");
+          client.print("{\"time\":\"");
           client.print(tmSec);
-          client.print("\"}]}");
+          client.print("\",\"machineStatus\":\"");
+          client.print(machineStatus);
+          client.print("\"}");
           client.println();
           break;
         }
@@ -73,4 +61,38 @@ void loop() {
 
   delay(1000);
   tmSec++;
+  if(tmSec == 60){
+    machineStatus = "HEATING";
+  }else if(tmSec == 75){
+    machineStatus = "BREWING";
+  }else if(tmSec == 90){
+    machineStatus = "DONE_BREWING";
+  }else if (tmSec == 105){
+    machineStatus = "ADD_WATER";
+  }
+}
+
+void connectWiFi(){
+  Serial.print("Connecting to WiFi");
+  WiFi.mode(WIFI_STA);
+  WiFi.begin(WIFI_NETWORK, WIFI_PASSWORD);
+
+  unsigned long startAttemptTime = millis();
+
+  while(WiFi.status() != WL_CONNECTED && millis() - startAttemptTime < WIFI_TIMEOUT_MS){
+    Serial.print(".");
+    delay(500);
+  }
+
+  if(WiFi.status() != WL_CONNECTED){
+    Serial.println("\nFailed to connect...");
+  }else{
+    Serial.print("\nConnected, IP: ");
+    Serial.println(WiFi.localIP());
+  }
+}
+
+String updateLEDStatus(){
+    //TODO: read LED voltage to determine if on.
+    return "POWER_OFF";
 }
