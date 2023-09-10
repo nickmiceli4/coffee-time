@@ -10,12 +10,13 @@ import Lottie
 
 class ViewController: UIViewController {
 
-    var brewing = false
     var prevStatus = "READY"
     
     @IBOutlet weak var animView: LottieAnimationView!
     @IBOutlet weak var statusTxt: UITextView!
     @IBOutlet weak var brew: UIButton!
+    @IBOutlet weak var reset: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,9 @@ class ViewController: UIViewController {
         
         brew.layer.cornerRadius = 20
         brew.layer.masksToBounds = true
+        reset.layer.cornerRadius = 20
+        reset.layer.masksToBounds = true
+        reset.isHidden = true;
         statusTxt.isEditable = false;
         
         animView.contentMode = .scaleAspectFit
@@ -38,21 +42,25 @@ class ViewController: UIViewController {
     }
 
     
-    @IBAction func brewButton(_ sender: Any) {
-        if(!brewing){
-            // TODO change brewing bool once done testing
-            brewing = false
-            makeRestCall(brew: true);
-        }
+    @IBAction func brewButtonPressed(_ sender: Any) {
+        brew.isEnabled = false;
+        makeRestCall(brew: 1)
     }
     
-    func makeRestCall(brew : Bool) {
+    @IBAction func resetButtonPressed(_ sender: Any) {
+        reset.isEnabled = false;
+        makeRestCall(brew:0)
+    }
+    
+    func makeRestCall(brew : Int) {
         var urlStr:String;
         
-        if(brew){
-            urlStr = "http://10.0.0.21/brew/1"
+        if(brew == 0){
+            urlStr = "http://192.168.0.11/brew/0"
+        } else if (brew == 1){
+            urlStr = "http://192.168.0.11/brew/1"
         } else{
-            urlStr = "http://10.0.0.21/brew/0"
+            urlStr = "http://192.168.0.11"
         }
         
         if let url = URL(string: urlStr) {
@@ -61,7 +69,15 @@ class ViewController: UIViewController {
                     do {
                         let res = try JSONDecoder().decode(Response.self, from: data)
                         DispatchQueue.main.async {
+                            // Display the status returned by the coffeemaker
                             self.displayStatus(status: res.machineStatus)
+                            
+                            // If the status is heating or brewing call again
+                            if (res.machineStatus == "HEATING" || res.machineStatus == "BREWING"){
+                                DispatchQueue.main.asyncAfter(deadline:.now() + 1.0){
+                                    self.makeRestCall(brew:-1)
+                                }
+                            }
                         }
                     }catch let error {
                         print(error)
@@ -69,14 +85,6 @@ class ViewController: UIViewController {
                 }
             }.resume()
         }
-        
-        DispatchQueue.main.asyncAfter(deadline:.now() + 1.0){
-            self.makeRestCall(brew:true)
-        }
-        
-       
-        
-
     }
     
     func displayStatus(status:String){
@@ -86,6 +94,9 @@ class ViewController: UIViewController {
                 break
             }
             statusTxt.text = "Ready to brew"
+            brew.isHidden = false
+            brew.isEnabled = true
+            reset.isHidden = true
             animView.pause()
             animView.animation = LottieAnimation.named("Coffee Cup Paper")
             animView.play()
@@ -96,6 +107,8 @@ class ViewController: UIViewController {
                 break
             }
             statusTxt.text = "Water is heating"
+            brew.isHidden = true
+            reset.isHidden = true
             animView.pause()
             animView.animation = LottieAnimation.named("Flask Heating Experiment")
             animView.play()
@@ -106,6 +119,8 @@ class ViewController: UIViewController {
                 break
             }
             statusTxt.text = "Brewing..."
+            brew.isHidden = true
+            reset.isHidden = true
             animView.pause()
             animView.animation = LottieAnimation.named("Coffee Maker")
             animView.play()
@@ -116,6 +131,9 @@ class ViewController: UIViewController {
                 break
             }
             statusTxt.text = "Coffee is ready!"
+            reset.isHidden = false
+            reset.isEnabled = true
+            brew.isHidden = true
             animView.pause()
             animView.animation = LottieAnimation.named("Coffee Mug")
             animView.play()
@@ -126,10 +144,26 @@ class ViewController: UIViewController {
                 break
             }
             statusTxt.text = "Add water"
+            reset.isHidden = false
+            reset.isEnabled = true
+            brew.isHidden = true
             animView.pause()
             animView.animation = LottieAnimation.named("Watering Loader")
             animView.play()
             prevStatus = "ADD_WATER"
+            break
+            case "NO_MUG":
+            if(prevStatus == "NO_MUG"){
+                break
+            }
+            statusTxt.text = "No mug..."
+            reset.isHidden = false
+            reset.isEnabled = true
+            brew.isHidden = true
+            animView.pause()
+            animView.animation = LottieAnimation.named("Coffee Mug 2")
+            animView.play()
+            prevStatus = "NO_MUG"
             break
             default:
             break
@@ -145,9 +179,11 @@ class ViewController: UIViewController {
         vc.isModalInPresentation = true
         if let sheet = vc.sheetPresentationController {
             sheet.detents = [.custom(resolver: { context in
-                0.25 * context.maximumDetentValue
-            }), .medium()]
-            sheet.largestUndimmedDetentIdentifier = .medium
+                0.12 * context.maximumDetentValue
+            }), .custom(identifier: .large, resolver: { context in
+                0.40 * context.maximumDetentValue
+            })]
+            sheet.largestUndimmedDetentIdentifier = .large
             
             
         }

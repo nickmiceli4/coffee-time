@@ -5,12 +5,8 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  float voltage = (analogRead(A0)*5.0)/1024.0;
+  float voltage = (analogRead(A7)*5.0)/4095.0;
   
-  if(voltage >= 2.75){
-    Serial.print("LED is on\n");
-  } else{
-    Serial.print("\rLED is off\n");
-  }
+  Serial.println(voltage);
   delay(1000);
 }

@@ -17,6 +17,7 @@
 		7B8A0D662A8C02D3006ECD9E /* CoffeeTimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8A0D652A8C02D3006ECD9E /* CoffeeTimeUITests.swift */; };
 		7B8A0D682A8C02D3006ECD9E /* CoffeeTimeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8A0D672A8C02D3006ECD9E /* CoffeeTimeUITestsLaunchTests.swift */; };
 		7BB0B2412A95A239008EAA42 /* SheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB0B2402A95A239008EAA42 /* SheetViewController.swift */; };
+		7BC15C4A2AABC73C00991B5D /* Coffee Mug 2.json in Resources */ = {isa = PBXBuildFile; fileRef = 7BC15C492AABC73C00991B5D /* Coffee Mug 2.json */; };
 		7BD8D3DF2A95D845005F108C /* Coffee Cup Paper.json in Resources */ = {isa = PBXBuildFile; fileRef = 7BD8D3DE2A95D845005F108C /* Coffee Cup Paper.json */; };
 		7BF6B8BF2A94480D00877A5E /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 7BF6B8BE2A94480D00877A5E /* Lottie */; };
 		7BF6B8C52A94485600877A5E /* Power Failure.json in Resources */ = {isa = PBXBuildFile; fileRef = 7BF6B8C02A94485500877A5E /* Power Failure.json */; };
@@ -58,6 +59,7 @@
 		7B8A0D652A8C02D3006ECD9E /* CoffeeTimeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeTimeUITests.swift; sourceTree = "<group>"; };
 		7B8A0D672A8C02D3006ECD9E /* CoffeeTimeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeTimeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7BB0B2402A95A239008EAA42 /* SheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViewController.swift; sourceTree = "<group>"; };
+		7BC15C492AABC73C00991B5D /* Coffee Mug 2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Coffee Mug 2.json"; sourceTree = "<group>"; };
 		7BD8D3DE2A95D845005F108C /* Coffee Cup Paper.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Coffee Cup Paper.json"; sourceTree = "<group>"; };
 		7BF6B8C02A94485500877A5E /* Power Failure.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Power Failure.json"; sourceTree = "<group>"; };
 		7BF6B8C12A94485500877A5E /* Coffee Maker.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Coffee Maker.json"; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				7BD8D3DE2A95D845005F108C /* Coffee Cup Paper.json */,
 				7BF6B8C22A94485600877A5E /* Coffee Mug.json */,
 				7BF6B8C02A94485500877A5E /* Power Failure.json */,
+				7BC15C492AABC73C00991B5D /* Coffee Mug 2.json */,
 				7BF6B8CE2A94596700877A5E /* Flask Heating Experiment.json */,
 				7BF6B8C32A94485600877A5E /* Watering Loader.json */,
 			);
@@ -260,6 +263,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BC15C4A2AABC73C00991B5D /* Coffee Mug 2.json in Resources */,
 				7B8A0D512A8C02D3006ECD9E /* LaunchScreen.storyboard in Resources */,
 				7BF6B8CF2A94596800877A5E /* Flask Heating Experiment.json in Resources */,
 				7BD8D3DF2A95D845005F108C /* Coffee Cup Paper.json in Resources */,
